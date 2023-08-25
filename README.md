@@ -151,8 +151,70 @@ Expected Output: Pizza {size: "slice", toppings: ["bacon", "pineapple"], cost: 7
 
 ```
 
+#### **Describe:** ShoppingCart()
 
+```javascript
+Test 1: "It should construct a ShoppingCart object containing an empty object called cart."
+Code:
+  const shoppingCart = new ShoppingCart();
+Expected Output: ShoppingCart { cart: {} }
 
+Test 2: "It should construct a ShoppingCart object containing an empty object called cart and a property called currentId that's initialized to '0'."
+Code:
+  const shoppingCart = new ShoppingCart();
+Expected Output: ShoppingCart { cart: {}, currentId: 0}
+
+```
+
+#### **Describe:** ShoppingCart.prototype.assignId()
+
+```javascript
+Test 1: "It should return the ShoppingCart object's currentId value."
+Code:
+  const shoppingCart = new ShoppingCart();
+  shoppingCart.assignId();
+Expected Output: 0
+
+Test 2: "It should return the ShoppingCart object's currentId value, plus 1."
+Code:
+  const shoppingCart = new ShoppingCart();
+  shoppingCart.assignId();
+Expected Output: 1
+
+Test 3: "It should increment the ShoppingCart object's currentId value by 1, and return that value."
+Code:
+  const shoppingCart = new ShoppingCart();
+  shoppingCart.assignId();
+Expected Output: 1
+
+```
+
+#### **Describe:** ShoppingCart.prototype.addPizza()
+
+```javascript
+Test 1: "It should return the empty cart property of the ShoppingCart object."
+Code:
+  const shoppingCart = new ShoppingCart();
+  shoppingCart.addPizza();
+Expected Output: {}
+
+Test 2: "It should add a Pizza object to the empty cart object of ShoppingCart."
+Code:
+  const shoppingCart = new ShoppingCart();
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  shoppingCart.addPizza(newPizza);
+  shoppingCart;
+Expected Output: ShoppingCart { slice: Pizza}
+
+Test 3: "It should add a Pizza object to the empty cart object of ShoppingCart, and assign that Pizza object an ID for the key."
+Code:
+  const shoppingCart = new ShoppingCart();
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  shoppingCart.addPizza(newPizza);
+  shoppingCart;
+Expected Output: ShoppingCart { 1: Pizza}
+
+```
 
 ## Known Bugs
 
