@@ -252,6 +252,14 @@ Code:
   shoppingCart.findPizza(1);
 Expected Output: Pizza {size: 'slice', toppings: Array(2), cost: 0}
 
+Test 3: "It should return the boolean value false if a key is passed through the method for a Pizza object that does not exist within the cart object."
+Code:
+  const shoppingCart = new ShoppingCart();
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  shoppingCart.addPizza(newPizza);
+  shoppingCart.findPizza(3);
+Expected Output: false
+
 ```
 
 #### **Describe:** ShoppingCart.prototype.determineTotalCost()
