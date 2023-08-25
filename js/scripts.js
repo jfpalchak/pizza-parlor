@@ -66,6 +66,9 @@ ShoppingCart.prototype.addPizza = function(pizza) {
   this.cart[this.assignId()] = pizza;
 };
 
+ShoppingCart.prototype.showCart = function () {
+  return this.cart;
+};
 
 // ********************
 // *     UI LOGIC     *
@@ -133,11 +136,9 @@ function handleEverything() {
     const pizzaToppings = getUserSelectedToppings(selectedToppings);
 
     const pizza = new Pizza(pizzaSize, pizzaToppings);
-
-    displayFinalCost(pizza);
-
     userCart.addPizza(pizza);
 
+    displayFinalCost(pizza);
     displayCartItems(userCart);
 
   });
