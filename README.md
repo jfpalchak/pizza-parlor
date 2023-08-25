@@ -63,6 +63,41 @@ Expected Output: "small"
 
 ```
 
+#### **Describe:** Pizza.prototype.findSizePrice()
+
+```javascript
+Test 1: "It should return the current value of the Pizza object's size property, which is a string."
+Code:
+  const newPizza = new Pizza("small", ["bacon", "pineapple"]);
+  newPizza.findSizePrice();
+Expected Output: "small"
+
+Test 2: "It should return the number '15' if the current value of the Pizza object's size property is 'small'."
+Code:
+  const newPizza = new Pizza("small", ["bacon", "pineapple"]);
+  newPizza.findSizePrice();
+Expected Output: 15
+
+Test 3: "It should return the number '18' if the current value of the Pizza object's size property is 'medium'."
+Code:
+  const newPizza = new Pizza("medium", ["bacon", "pineapple"]);
+  newPizza.findSizePrice();
+Expected Output: 18
+
+Test 4: "It should return the number '20' if the current value of the Pizza object's size property is 'large'."
+Code:
+  const newPizza = new Pizza("large", ["bacon", "pineapple"]);
+  newPizza.findSizePrice();
+Expected Output: 20
+
+Test 5: "It should return the number '5' if the current value of the Pizza object's size property is 'slice'."
+Code:
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  newPizza.findSizePrice();
+Expected Output: 20
+```
+
+
 #### **Describe:** Pizza.prototype.determineCost()
 
 ```javascript
