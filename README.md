@@ -216,6 +216,33 @@ Expected Output: ShoppingCart { 1: Pizza}
 
 ```
 
+#### **Describe:** ShoppingCart.prototype.showCart()
+
+```javascript
+Test 1: "It should return an empty cart object from ShoppingCart object."
+Code: 
+  const shoppingCart = new ShoppingCart();
+  shoppingCart.showCart();
+Expected Output: {}
+
+Test 2: "It should return the cart object, containing a Pizza object."
+Code:
+  const shoppingCart = new ShoppingCart();
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  shoppingCart.addPizza(newPizza);
+  shoppingCart.showCart();
+Expected Output: { 1: Pizza}
+
+```
+
+#### **Describe:** ShoppingCart.prototype.findPizza()
+
+```javascript
+Test 1:
+Code:
+Expected Output:
+
+```
 ## Known Bugs
 
 * _Any known issues_
