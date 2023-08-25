@@ -111,15 +111,30 @@ Test 5: "It should return the number '5' if the current value of the Pizza objec
 Code:
   const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
   newPizza.findSizePrice();
-Expected Output: 20
+Expected Output: 5
 ```
 
 #### **Describe:** Pizza.prototype.determineCost()
 
 ```javascript
-Test 1:
+Test 1: "It should return the initial value of the Pizza object's cost property, which is '0'."
 Code:
-Expected Output: 
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  newPizza.determineCost();
+Expected Output: 0
+
+Test 2: "It should return the sum of the initial value of the Pizza object's cost property ('0') and the price value for a 'slice' of pizza (determined using findSizePrice()), which is '5'."
+Code:
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  newPizza.determineCost();
+Expected Output: 5
+
+Test 3: "It should return the sum of the price value for a 'slice' of pizza ('5'), and the price value of two toppings (determined using findToppingsPrice()), which is '2'."
+Code:
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  newPizza.determineCost();
+Expected Output: 7
+
 
 ```
 
