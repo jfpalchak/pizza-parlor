@@ -21,6 +21,9 @@ Pizza.prototype.findSize = function() {
   return this.size;
 };
 
+Pizza.prototype.determineCost = function() {
+  return this.findToppings();
+}
 
 
 
