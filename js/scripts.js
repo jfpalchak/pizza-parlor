@@ -95,11 +95,11 @@ ShoppingCart.prototype.determineTotalCost = function() {
 // ********************
 
 // display final cost of the user's pizza order
-function displayFinalCost(pizza) {
+function displayFinalCost(userCart) {
   const order = document.querySelector('span#customer-order');
   order.innerText = null;
   
-  const finalCost = "$" + pizza.determineCost();
+  const finalCost = "$" + userCart.determineTotalCost();
 
   order.append(finalCost);
   document.querySelector('div.results').removeAttribute('id','hidden');
@@ -138,6 +138,8 @@ function displayCartItems(cartToDisplay) {
 
   pizzaList.append(ul);
 
+  displayFinalCost(cartToDisplay);
+
 }
 
 
@@ -159,7 +161,6 @@ function handleEverything() {
     const pizza = new Pizza(pizzaSize, pizzaToppings);
     userCart.addPizza(pizza);
 
-    displayFinalCost(pizza);
     displayCartItems(userCart);
 
   });
