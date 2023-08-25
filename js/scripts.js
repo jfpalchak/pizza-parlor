@@ -22,7 +22,7 @@ Pizza.prototype.findSize = function() {
 };
 
 Pizza.prototype.determineCost = function() {
-  return this.findToppings();
+  return this.findToppings().length;
 }
 
 
