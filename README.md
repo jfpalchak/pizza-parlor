@@ -265,9 +265,29 @@ Expected Output: false
 #### **Describe:** ShoppingCart.prototype.determineTotalCost()
 
 ```javascript
-Test 1:
+Test 1: "It should return 0 if the ShoppingCart's cart object is empty."
 Code:
-Expected Output:
+  const shoppingCart = new ShoppingCart();
+  shoppingCart.determineTotalCost();
+Expected Output: 0
+
+Test 2: "It should return the total cost of a single Pizza object in the ShoppingCart's cart."
+Code:
+  const shoppingCart = new ShoppingCart();
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  shoppingCart.addPizza(newPizza);
+  shoppingCart.determineTotalCost();
+Expected Output: 7
+
+Test 2: "It should return the sum of multiple Pizza objects in the ShoppingCart's cart."
+Code:
+  const shoppingCart = new ShoppingCart();
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  const newPizza2 = new Pizza("slice", ["bacon", "pineapple"]);
+  shoppingCart.addPizza(newPizza);
+  shoppingCart.addPizza(newPizza2);
+  shoppingCart.determineTotalCost();
+Expected Output: 14
 
 ```
 
