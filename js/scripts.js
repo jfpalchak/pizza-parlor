@@ -27,7 +27,10 @@ Pizza.prototype.findSize = function() {
 };
 
 Pizza.prototype.findSizePrice = function() {
-  return this.findSize();
+  const size = this.findSize();
+  if (size === 'small') {
+    return 15;
+  }
 };
 
 
