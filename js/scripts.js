@@ -16,14 +16,19 @@ Pizza.prototype.findToppings = function() {
   return this.toppings;
 };
 
+// returns the length of the array of toppings for the Pizza object
+Pizza.prototype.findToppingsPrice = function() {
+  return this.findToppings().length;
+}
+
 // returns value of size property for Pizza object
 Pizza.prototype.findSize = function() {
   return this.size;
 };
 
-Pizza.prototype.determineCost = function() {
-  return this.findToppings().length;
-}
+Pizza.prototype.findSizePrice = function() {
+  return this.findSize();
+};
 
 
 

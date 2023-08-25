@@ -52,6 +52,23 @@ Expected Output: ["bacon", "pineapple"]
 
 ```
 
+#### **Describe:** Pizza.prototype.findToppingsPrice()
+
+```javascript
+Test 1: "It should return the current value of the Pizza object's topping property, which is an array of strings."
+Code:
+  const newPizza = new Pizza("small", ["bacon", "pineapple"]);
+  newPizza.determineCost();
+Expected Output: ["bacon", "pineapple"]
+
+Test 2: "It should return the length of the number of items currently in the Pizza object's topping property."
+Code:
+  const newPizza = new Pizza("small", ["bacon", "pineapple"]);
+  newPizza.determineCost();
+Expected Output: 2
+
+```
+
 #### **Describe:** Pizza.prototype.findSize()
 
 ```javascript
@@ -97,24 +114,7 @@ Code:
 Expected Output: 20
 ```
 
-
 #### **Describe:** Pizza.prototype.determineCost()
-
-```javascript
-Test 1: "It should return the current value of the Pizza object's topping property, which is an array of strings."
-Code:
-  const newPizza = new Pizza("small", ["bacon", "pineapple"]);
-  newPizza.determineCost();
-Expected Output: ["bacon", "pineapple"]
-
-Test 2: "It should return the length of the number of items currently in the Pizza object's topping property."
-Code:
-  const newPizza = new Pizza("small", ["bacon", "pineapple"]);
-  newPizza.determineCost();
-Expected Output: 2
-
-
-```
 
 
 
