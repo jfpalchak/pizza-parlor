@@ -6,11 +6,68 @@
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/scripts.js"></script>
-  <title>Document</title>
+  <title>Pizza Parlor</title>
 </head>
 <body>
 
-  <h1>Welcome to the Pizza Parlor</h1>
+  <div id="greeting" class="container">
+    <h1>Welcome to the Pizza Parlor</h1>
+  </div>
+
+  <div id="menu-form" class="container">
+    <form id="new-pizza">
+      <fieldset>
+        <legend>Pizza Selection:</legend>
+
+        <div id="size-selection">
+          <h5>1. What size pizza would you like?</h5>
+          <label for="size">Size:</label>
+          <select id="size">
+            <option value="slice">Slice</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+        </div>
+
+        <div id="topping-selection">
+          <h5>2. Choose any of the toppings below for your pizza:</h5>
+          <input type="checkbox" id="topping1" name="topping1" value="cheese">
+          <label for="topping1">Cheese</label>
+          <br />
+          <input type="checkbox" id="topping2" name="topping2" value="pepperoni">
+          <label for="topping2">Pepperoni</label>
+          <br />
+          <input type="checkbox" id="topping3" name="topping3" value="bacon">
+          <label for="topping3">Bacon</label>
+          <br />
+          <input type="checkbox" id="topping4" name="topping4" value="sausage">
+          <label for="topping4">Sausage</label>
+          <br />
+          <input type="checkbox" id="topping5" name="topping5" value="onions">
+          <label for="topping5">Onions</label>
+          <br />
+          <input type="checkbox" id="topping6" name="topping6" value="mushrooms">
+          <label for="topping6">Mushrooms</label>
+          <br />
+          <input type="checkbox" id="topping7" name="topping7" value="peppers">
+          <label for="topping7">Peppers</label>
+          <br />
+          <input type="checkbox" id="topping8" name="topping8" value="broccoli">
+          <label for="topping8">Broccoli</label>
+          <br />
+          <input type="checkbox" id="topping9" name="topping9" value="olives">
+          <label for="topping9">Olives</label>
+        </div>
+
+        <div id="submit-button">
+          <button type="submit" class="btn btn-primary">Add to Checkout</button>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+
   
 </body>
 </html>
