@@ -42,7 +42,7 @@ Pizza.prototype.findSizePrice = function() {
 };
 
 Pizza.prototype.determineCost = function() {
-  return this.cost;
+  return this.cost + this.findSizePrice();
 }
 
 
