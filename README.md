@@ -55,7 +55,7 @@ Expected Output: ["bacon", "pineapple"]
 #### **Describe:** Pizza.prototype.findSize()
 
 ```javascript
-Test 1: "It should return the current value of the Pizza object's size property."
+Test 1: "It should return the current value of the Pizza object's size property, which is a string."
 Code:
   const newPizza = new Pizza("small", ["bacon", "pineapple"]);
   newPizza.findSize();

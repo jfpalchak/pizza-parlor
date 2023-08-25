@@ -15,6 +15,10 @@ Pizza.prototype.findToppings = function() {
   return this.toppings;
 }
 
+Pizza.prototype.findSize = function() {
+  return this.size;
+}
+
 
 
 
