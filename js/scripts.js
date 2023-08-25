@@ -47,14 +47,18 @@ Pizza.prototype.determineCost = function() {
   return this.cost;
 };
 
+// BUSINESS LOGIC for ShoppingCart ------------------
 
+function ShoppingCart() {
+  this.cart = {};
+}
 
 
 // ********************
 // *     UI LOGIC     *
 // ********************
 
-// 
+// display final cost of the user's pizza order
 function displayFinalCost(pizza) {
   const order = document.querySelector('span#customer-order');
   order.innerText = null;
@@ -66,17 +70,27 @@ function displayFinalCost(pizza) {
 
 }
 
+// using the NodeList object of checked checkbox elements as a parameter,
+// return an array of the user's selected pizza toppings
+function getUserSelectedToppings(checkedToppings) {
+  
+  const pizzaToppings = [];
+
+  const checkedToppingsArray = Array.from(checkedToppings);
+  checkedToppingsArray.forEach(function(checkbox) {
+    pizzaToppings.push(checkbox.value);
+  });
+
+  return pizzaToppings;
+}
+
 // handle the form submit event
 function handleSubmitPizzaOrder(e) {
   e.preventDefault();
 
   const pizzaSize = document.getElementById('size').value;
-  const pizzaToppings = [];
-  const checkedToppings = Array.from(document.querySelectorAll('input:checked'));
-
-  checkedToppings.forEach(function(checkbox) {
-    pizzaToppings.push(checkbox.value);
-  });
+  const selectedToppings = document.querySelectorAll('input:checked');
+  const pizzaToppings = getUserSelectedToppings(selectedToppings);
 
   const pizza = new Pizza(pizzaSize, pizzaToppings);
 
