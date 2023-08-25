@@ -44,7 +44,7 @@ Expected Output: Pizza {size: "small", toppings: ["bacon", "pineapple"], cost: n
 #### **Describe:** Pizza.prototype.findToppings()
 
 ```javascript
-Test 1: "It should return the current value of the Pizza object's topping property."
+Test 1: "It should return the current value of the Pizza object's topping property, which is an array of strings."
 Code:
   const newPizza = new Pizza("small", ["bacon", "pineapple"]);
   newPizza.findToppings();
