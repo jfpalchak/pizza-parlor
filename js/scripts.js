@@ -81,7 +81,13 @@ ShoppingCart.prototype.showCart = function() {
 
 // return the sum of the costs of every pizza in ShoppingCart's cart
 ShoppingCart.prototype.determineTotalCost = function() {
- return this.findPizza(1).determineCost();
+  let totalCost = 0;
+  keyArray = Object.keys(this.showCart());
+  for (let i=1; i <= keyArray.length; i++){
+    let pizza = this.findPizza(i);
+    totalCost += pizza.determineCost();
+  }
+  return totalCost;
 };
 
 // ********************
@@ -122,7 +128,7 @@ function displayCartItems(cartToDisplay) {
 
   const ul = document.createElement('ul');
   Object.keys(cartToDisplay.showCart()).forEach(function(key) { 
-    const pizza = cartToDisplay.cart[key]; // CREATE FINDPIZZA METHOD
+    const pizza = cartToDisplay.findPizza(key);
     const li = document.createElement('li');
     const displayText = "Item " + key + " - Pizza: " + pizza.findSize();
     li.append(displayText);
