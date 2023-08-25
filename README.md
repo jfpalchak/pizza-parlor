@@ -39,8 +39,32 @@ Test 2: "It should return a Pizza object with three properties for size, topping
 Code:
   const newPizza = new Pizza("small", ["bacon", "pineapple"]);
 Expected Output: Pizza {size: "small", toppings: ["bacon", "pineapple"], cost: null}
+```
+
+#### **Describe:** Pizza.prototype.findToppings()
+
+```javascript
+Test 1: "It should return the current value of the Pizza object's topping property."
+Code:
+  const newPizza = new Pizza("small", ["bacon", "pineapple"]);
+  newPizza.findToppings();
+Expected Output: ["bacon", "pineapple"]
 
 ```
+
+#### **Describe:** Pizza.prototype.findSize()
+
+```javascript
+Test 1: "It should return the current value of the Pizza object's size property."
+Code:
+  const newPizza = new Pizza("small", ["bacon", "pineapple"]);
+  newPizza.findSize();
+Expected Output: "small"
+
+```
+
+
+
 
 ## Known Bugs
 
