@@ -34,6 +34,8 @@ Pizza.prototype.findSizePrice = function() {
     return 18;
   } else if (size === 'large') {
     return 20;
+  } else if (size === 'slice') {
+    return 5;
   }
 };
 
