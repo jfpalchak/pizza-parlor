@@ -81,7 +81,7 @@ ShoppingCart.prototype.showCart = function() {
 
 // return the sum of the costs of every pizza in ShoppingCart's cart
 ShoppingCart.prototype.determineTotalCost = function() {
- return 0;
+ return this.findPizza(1).determineCost();
 };
 
 // ********************
