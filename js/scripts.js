@@ -62,6 +62,7 @@ function displayFinalCost(pizza) {
   const finalCost = "$" + pizza.determineCost();
 
   order.append(finalCost);
+  document.querySelector('div.results').removeAttribute('id','hidden');
 
 }
 
