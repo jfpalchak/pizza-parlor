@@ -14,65 +14,80 @@
     <h1>Welcome to the Pizza Parlor</h1>
   </div>
 
-  <div id="menu-form" class="container">
-    <form id="new-pizza">
-      <fieldset>
-        <legend>Pizza Selection:</legend>
+  <div class="BIG container">
+    <div class="row">
+      <div id="menu-form" class="col-8 container">
+        <form id="new-pizza">
+          <fieldset>
+            <legend>Pizza Selection:</legend>
 
-        <div id="size-selection">
-          <h5>1. What size pizza would you like?</h5>
-          <label for="size">Size:</label>
-          <select id="size">
-            <option value="slice">Slice</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
+            <div id="size-selection" class="container">
+              <h5>1. What size pizza would you like?</h5>
+              <label for="size">Size:</label>
+              <select id="size">
+                <option value="slice">Slice</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+            </div>
+
+            <div id="topping-selection" class="container">
+              <h5>2. Choose any of the following toppings for your pizza:</h5>
+              <input type="checkbox" name="topping-option" id="cheese" value="cheese">
+              <label for="cheese">Cheese</label>
+              <br />
+              <input type="checkbox" name="topping-option" id="pepperoni" value="pepperoni">
+              <label for="pepperoni">Pepperoni</label>
+              <br />
+              <input type="checkbox" name="topping-option" id="bacon" value="bacon">
+              <label for="bacon">Bacon</label>
+              <br />
+              <input type="checkbox" name="topping-option" id="sausage" value="sausage">
+              <label for="sausage">Sausage</label>
+              <br />
+              <input type="checkbox" name="topping-option" id="onions" value="onions">
+              <label for="onions">Onions</label>
+              <br />
+              <input type="checkbox" name="topping-option" id="mushrooms" value="mushrooms">
+              <label for="mushrooms">Mushrooms</label>
+              <br />
+              <input type="checkbox" name="topping-option" id="peppers" value="peppers">
+              <label for="peppers">Peppers</label>
+              <br />
+              <input type="checkbox" name="topping-option" id="broccoli" value="broccoli">
+              <label for="broccoli">Broccoli</label>
+              <br />
+              <input type="checkbox" name="topping-option" id="olives" value="olives">
+              <label for="olives">Olives</label>
+            </div>
+
+            <div id="submit-button" class="container">
+              <button type="submit" class="btn btn-primary">Add to Checkout</button>
+            </div>
+
+          </fieldset>
+        </form>
+      </div>
+
+      <div id="shopping-cart" class="col-4 container">
+        <h5>Customer Shopping Cart:</h5>
+        <div id="shopping-cart-pizzas">
+          <span id="pizza-list"></span>
         </div>
+      </div>
 
-        <div id="topping-selection">
-          <h5>2. Choose any of the following toppings for your pizza:</h5>
-          <input type="checkbox" name="topping-option" id="cheese" value="cheese">
-          <label for="cheese">Cheese</label>
-          <br />
-          <input type="checkbox" name="topping-option" id="pepperoni" value="pepperoni">
-          <label for="pepperoni">Pepperoni</label>
-          <br />
-          <input type="checkbox" name="topping-option" id="bacon" value="bacon">
-          <label for="bacon">Bacon</label>
-          <br />
-          <input type="checkbox" name="topping-option" id="sausage" value="sausage">
-          <label for="sausage">Sausage</label>
-          <br />
-          <input type="checkbox" name="topping-option" id="onions" value="onions">
-          <label for="onions">Onions</label>
-          <br />
-          <input type="checkbox" name="topping-option" id="mushrooms" value="mushrooms">
-          <label for="mushrooms">Mushrooms</label>
-          <br />
-          <input type="checkbox" name="topping-option" id="peppers" value="peppers">
-          <label for="peppers">Peppers</label>
-          <br />
-          <input type="checkbox" name="topping-option" id="broccoli" value="broccoli">
-          <label for="broccoli">Broccoli</label>
-          <br />
-          <input type="checkbox" name="topping-option" id="olives" value="olives">
-          <label for="olives">Olives</label>
-        </div>
+    </div>
+  </div> 
 
-        <div id="submit-button">
-          <button type="submit" class="btn btn-primary">Add to Checkout</button>
-        </div>
-
-      </fieldset>
-    </form>
+<div class="container">
+  <div class="row justify-content-end">
+    <div id="hidden" class="results col-4">
+      <h5>Final Cost:</h5>
+      <span id="customer-order"></span>
+    </div>
   </div>
-
-  <div id="hidden" class="results container">
-    <h5>Final Cost:</h5>
-    <span id="customer-order"></span>
-  </div>
-
+</div>
   
 </body>
 </html>
