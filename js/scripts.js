@@ -60,7 +60,7 @@ ShoppingCart.prototype.assignId = function() {
 };
 
 ShoppingCart.prototype.addPizza = function(pizza) {
-  this.cart[pizza.size] = pizza;
+  this.cart[this.assignId()] = pizza;
 };
 
 
