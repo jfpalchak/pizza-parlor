@@ -59,8 +59,8 @@ ShoppingCart.prototype.assignId = function() {
   return this.currentId;
 };
 
-ShoppingCart.prototype.addPizza = function() {
-  return this.cart;
+ShoppingCart.prototype.addPizza = function(pizza) {
+  this.cart[pizza.size] = pizza;
 };
 
 
