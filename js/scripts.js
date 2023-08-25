@@ -55,7 +55,8 @@ function ShoppingCart() {
 }
 
 ShoppingCart.prototype.assignId = function() {
-  return this.currentId + 1;
+  this.currentId += 1;
+  return this.currentId;
 };
 
 
