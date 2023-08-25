@@ -27,8 +27,7 @@ Pizza.prototype.findSize = function() {
   return this.size;
 };
 
-// returns a number, representing a price value, 
-// depending on the size property for the Pizza object
+// returns a number, depending on the size property for the Pizza object
 Pizza.prototype.findSizePrice = function() {
   const size = this.findSize();
   if (size === 'small') {
@@ -55,8 +54,27 @@ Pizza.prototype.determineCost = function() {
 // *     UI LOGIC     *
 // ********************
 
-// handle all UI Logic
+// handle the form submit event
+function handleSubmitEvent(e) {
+  e.preventDefault();
+
+  const pizzaSize = document.getElementById('size').value;
+  const pizzaToppings = [];
+  const checkedToppings = Array.from(document.querySelectorAll('input:checked'));
+  checkedToppings.forEach(function(checkbox) {
+    pizzaToppings.push(checkbox.value);
+  });
+  console.log(pizzaToppings);
+  
+
+
+}
+
+// handle all UI logic
 function handleEverything() {
+
+  const pizzaForm = document.querySelector('form');
+  pizzaForm.addEventListener('submit', handleSubmitEvent);
 
 }
 
