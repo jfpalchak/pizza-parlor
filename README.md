@@ -279,7 +279,7 @@ Code:
   shoppingCart.determineTotalCost();
 Expected Output: 7
 
-Test 2: "It should return the sum of multiple Pizza objects in the ShoppingCart's cart."
+Test 3: "It should return the sum of multiple Pizza objects in the ShoppingCart's cart."
 Code:
   const shoppingCart = new ShoppingCart();
   const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
@@ -293,8 +293,8 @@ Expected Output: 14
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* User can infinitely add as many pizza's to the shopping cart as they like, and the list will grow
+beyond the height of the viewport, taking the Final Cost element with it.
 
 ## License
 
