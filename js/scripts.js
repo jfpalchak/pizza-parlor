@@ -176,9 +176,9 @@ function getUserSelectedToppings(checkedToppings) {
 function handleEverything() {
 
   const userCart = new ShoppingCart();
-
-  const pizzaForm = document.querySelector('form');
+  
   // handle the pizza form submit event
+  const pizzaForm = document.querySelector('form');
   pizzaForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -193,8 +193,8 @@ function handleEverything() {
 
   });
 
-  const pizzaItems = document.querySelector('div#shopping-cart-pizzas');
   // handle the click event on shopping cart items
+  const pizzaItems = document.querySelector('div#shopping-cart-pizzas');
   pizzaItems.addEventListener('click', function(event) {
     
     displayCartItems(userCart);
