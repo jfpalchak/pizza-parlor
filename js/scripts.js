@@ -49,16 +49,19 @@ Pizza.prototype.determineCost = function() {
 
 // BUSINESS LOGIC for ShoppingCart ------------------
 
+// constructor for ShoppingCart object
 function ShoppingCart() {
   this.cart = {};
   this.currentId = 0;
 }
 
+// returns the currentId property of ShoppingCart after incrementing by 1
 ShoppingCart.prototype.assignId = function() {
   this.currentId += 1;
   return this.currentId;
 };
 
+// add's a Pizza object to the ShoppingCart
 ShoppingCart.prototype.addPizza = function(pizza) {
   this.cart[this.assignId()] = pizza;
 };
@@ -94,25 +97,50 @@ function getUserSelectedToppings(checkedToppings) {
   return pizzaToppings;
 }
 
-// handle the form submit event
-function handleSubmitPizzaOrder(e) {
-  e.preventDefault();
+// display a list of all the pizza's added by the user
+function displayCartItems(cartToDisplay) {
 
-  const pizzaSize = document.getElementById('size').value;
-  const selectedToppings = document.querySelectorAll('input:checked');
-  const pizzaToppings = getUserSelectedToppings(selectedToppings);
+  const pizzaList = document.querySelector('span#pizza-list');
+  pizzaList.innerText = null;
 
-  const pizza = new Pizza(pizzaSize, pizzaToppings);
+  const ul = document.createElement('ul');
+  Object.keys(cartToDisplay.cart).forEach(function(key) { // CREATE FINDCART METHOD
+    const pizza = cartToDisplay.cart[key]; // CREATE FINDPIZZA METHOD
+    const li = document.createElement('li');
+    const displayText = "Item " + key + " - Pizza: " + pizza.findSize();
+    li.append(displayText);
+    li.setAttribute("id", key);
+    ul.append(li);
+  });
 
-  displayFinalCost(pizza);
-  
+  pizzaList.append(ul);
+
 }
+
 
 // handle all UI logic
 function handleEverything() {
 
+  const userCart = new ShoppingCart();
+
   const pizzaForm = document.querySelector('form');
-  pizzaForm.addEventListener('submit', handleSubmitPizzaOrder);
+  // handle the form submit event
+  pizzaForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const pizzaSize = document.getElementById('size').value;
+    const selectedToppings = document.querySelectorAll('input:checked');
+    const pizzaToppings = getUserSelectedToppings(selectedToppings);
+
+    const pizza = new Pizza(pizzaSize, pizzaToppings);
+
+    displayFinalCost(pizza);
+
+    userCart.addPizza(pizza);
+
+    displayCartItems(userCart);
+
+  });
 
 }
 
