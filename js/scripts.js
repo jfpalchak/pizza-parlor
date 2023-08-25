@@ -7,6 +7,7 @@
 function Pizza(size, toppingsList) {
   this.size = size;
   this.toppings = toppingsList;
+  this.cost = null;
 }
 
 
