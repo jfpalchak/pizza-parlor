@@ -17,17 +17,23 @@ _{This is a detailed description of your application. Give as much detail as nee
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+1. Copy the **[URL](https://github.com/jfpalchak/pizza-parlor.git)** provided for this repository.
+2. Open Terminal.
+3. Change your working directory to where you want the cloned directory.
+4. In your terminal, type `git clone` and use the copied URL from Step 1. Or, copy the following git command:
+```bash
+git clone https://github.com/jfpalchak/pizza-parlor.git
+```
+5. Navigate to the top level of the newly cloned directory.
+6. Open index.html in your browser to view and navigate the webpage.
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+##### _Alternatively:_
+
+1. Go to the website directly via **[GitHub Pages](https://jfpalchak.github.io/pizza-parlor/)**.
 
 ## Tests
 
-#### **Describe:** Pizza()
+##### **Describe:** Pizza()
 
 ```javascript
 Test 1: "It should return a Pizza object with two properties for size and toppings."
@@ -41,7 +47,7 @@ Code:
 Expected Output: Pizza {size: "small", toppings: ["bacon", "pineapple"], cost: 0}
 ```
 
-#### **Describe:** Pizza.prototype.findToppings()
+##### **Describe:** Pizza.prototype.findToppings()
 
 ```javascript
 Test 1: "It should return the current value of the Pizza object's topping property, which is an array of strings."
@@ -52,7 +58,7 @@ Expected Output: ["bacon", "pineapple"]
 
 ```
 
-#### **Describe:** Pizza.prototype.findToppingsPrice()
+##### **Describe:** Pizza.prototype.findToppingsPrice()
 
 ```javascript
 Test 1: "It should return the current value of the Pizza object's topping property, which is an array of strings."
@@ -69,7 +75,7 @@ Expected Output: 2
 
 ```
 
-#### **Describe:** Pizza.prototype.findSize()
+##### **Describe:** Pizza.prototype.findSize()
 
 ```javascript
 Test 1: "It should return the current value of the Pizza object's size property, which is a string."
@@ -80,7 +86,7 @@ Expected Output: "small"
 
 ```
 
-#### **Describe:** Pizza.prototype.findSizePrice()
+##### **Describe:** Pizza.prototype.findSizePrice()
 
 ```javascript
 Test 1: "It should return the current value of the Pizza object's size property, which is a string."
@@ -115,7 +121,7 @@ Expected Output: 5
 
 ```
 
-#### **Describe:** Pizza.prototype.determineCost()
+##### **Describe:** Pizza.prototype.determineCost()
 
 ```javascript
 Test 1: "It should return the initial value of the Pizza object's cost property, which is '0'."
