@@ -6,10 +6,10 @@
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* HTML
+* CSS
+* Bootstrap
+* JavaScript
 
 ## Description
 
@@ -112,6 +112,7 @@ Code:
   const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
   newPizza.findSizePrice();
 Expected Output: 5
+
 ```
 
 #### **Describe:** Pizza.prototype.determineCost()
@@ -135,6 +136,12 @@ Code:
   newPizza.determineCost();
 Expected Output: 7
 
+Test 4: "It should set the Pizza object's cost property to the sum of the size price and toppings price, as well as return this sum."
+Code:
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  const totalPrice = newPizza.determineCost();
+  newPizza;
+Expected Output: Pizza {size: "slice", toppings: ["bacon", "pineapple"], cost: 7}
 
 ```
 
