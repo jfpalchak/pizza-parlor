@@ -2,7 +2,7 @@
 
 #### By Joey Palchak
 
-#### _{Brief description of application}_
+#### _A mock pizza order webpage application showcasing an understanding of Object-Oriented JavaScript._
 
 ## Technologies Used
 
