@@ -54,6 +54,10 @@ function ShoppingCart() {
   this.currentId = 0;
 }
 
+ShoppingCart.prototype.assignId = function() {
+  return this.currentId;
+};
+
 
 // ********************
 // *     UI LOGIC     *
