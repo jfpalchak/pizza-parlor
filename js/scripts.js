@@ -21,11 +21,13 @@ Pizza.prototype.findToppingsPrice = function() {
   return this.findToppings().length;
 }
 
-// returns value of size property for Pizza object
+// returns value of size property for the Pizza object
 Pizza.prototype.findSize = function() {
   return this.size;
 };
 
+// returns a number, representing a price value, 
+// depending on the size property for the Pizza object
 Pizza.prototype.findSizePrice = function() {
   const size = this.findSize();
   if (size === 'small') {
@@ -38,6 +40,10 @@ Pizza.prototype.findSizePrice = function() {
     return 5;
   }
 };
+
+Pizza.prototype.determineCost = function() {
+  return this.cost;
+}
 
 
 
