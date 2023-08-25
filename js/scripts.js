@@ -59,6 +59,10 @@ ShoppingCart.prototype.assignId = function() {
   return this.currentId;
 };
 
+ShoppingCart.prototype.addPizza = function() {
+  return this.cart;
+};
+
 
 // ********************
 // *     UI LOGIC     *
