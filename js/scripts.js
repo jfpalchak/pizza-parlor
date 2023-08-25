@@ -66,9 +66,14 @@ ShoppingCart.prototype.addPizza = function(pizza) {
   this.cart[this.assignId()] = pizza;
 };
 
+// return the cart object from ShoppingCart
 ShoppingCart.prototype.showCart = function () {
   return this.cart;
 };
+
+ShoppingCart.prototype.findPizza = function() {
+  return this.cart;
+}
 
 // ********************
 // *     UI LOGIC     *
@@ -107,7 +112,7 @@ function displayCartItems(cartToDisplay) {
   pizzaList.innerText = null;
 
   const ul = document.createElement('ul');
-  Object.keys(cartToDisplay.cart).forEach(function(key) { // CREATE FINDCART METHOD
+  Object.keys(cartToDisplay.showCart()).forEach(function(key) { 
     const pizza = cartToDisplay.cart[key]; // CREATE FINDPIZZA METHOD
     const li = document.createElement('li');
     const displayText = "Item " + key + " - Pizza: " + pizza.findSize();
@@ -127,7 +132,8 @@ function handleEverything() {
   const userCart = new ShoppingCart();
 
   const pizzaForm = document.querySelector('form');
-  // handle the form submit event
+
+  // handle the pizza form submit event
   pizzaForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
