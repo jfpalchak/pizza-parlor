@@ -27,12 +27,18 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Tests
 
-#### **Description:** 
+#### **Describe:** Pizza()
 
 ```javascript
-Test 1:
+Test 1: "It should return a Pizza object with two properties for size and toppings."
 Code:
-Expected Output:
+  const newPizza = new Pizza("small", ["bacon", "pineapple"]);
+Expected Output: Pizza {size: "small", toppings: ["bacon", "pineapple"]}
+
+Test 2: "It should return a Pizza object with three properties for size, toppings, and cost, while only taking arguments for size and toppings."
+Code:
+  const newPizza = new Pizza("small", ["bacon", "pineapple"]);
+Expected Output: Pizza {size: "small", toppings: ["bacon", "pineapple"], cost: null}
 
 ```
 
