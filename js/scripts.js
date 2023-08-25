@@ -32,6 +32,8 @@ Pizza.prototype.findSizePrice = function() {
     return 15;
   } else if (size === 'medium') {
     return 18;
+  } else if (size === 'large') {
+    return 20;
   }
 };
 
