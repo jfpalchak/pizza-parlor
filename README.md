@@ -1,4 +1,4 @@
-# _{Application Name}_
+# _Pizza Parlor_
 
 #### By Joey Palchak
 
@@ -38,7 +38,7 @@ Expected Output: Pizza {size: "small", toppings: ["bacon", "pineapple"]}
 Test 2: "It should return a Pizza object with three properties for size, toppings, and cost, while only taking arguments for size and toppings."
 Code:
   const newPizza = new Pizza("small", ["bacon", "pineapple"]);
-Expected Output: Pizza {size: "small", toppings: ["bacon", "pineapple"], cost: null}
+Expected Output: Pizza {size: "small", toppings: ["bacon", "pineapple"], cost: 0}
 ```
 
 #### **Describe:** Pizza.prototype.findToppings()
@@ -62,6 +62,25 @@ Code:
 Expected Output: "small"
 
 ```
+
+#### **Describe:** Pizza.prototype.determineCost()
+
+```javascript
+Test 1: "It should return the current value of the Pizza object's topping property, which is an array of strings."
+Code:
+  const newPizza = new Pizza("small", ["bacon", "pineapple"]);
+  newPizza.determineCost();
+Expected Output: ["bacon", "pineapple"]
+
+Test 2: "It should return the length of the number of items currently in the Pizza object's topping property."
+Code:
+  const newPizza = new Pizza("small", ["bacon", "pineapple"]);
+  newPizza.determineCost();
+Expected Output: 2
+
+
+```
+
 
 
 

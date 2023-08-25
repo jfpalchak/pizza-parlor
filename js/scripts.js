@@ -4,20 +4,22 @@
 
 // BUSINESS LOGIC for Pizza ------------------
 
-function Pizza(size, toppingsList) {
-  this.size = size;
+//constructor for Pizza object
+function Pizza(pizzaSize, toppingsList) {
+  this.size = pizzaSize;
   this.toppings = toppingsList;
-  this.cost = null;
+  this.cost = 0;
 }
 
 // returns value of toppings property for Pizza object
 Pizza.prototype.findToppings = function() {
   return this.toppings;
-}
+};
 
+// returns value of size property for Pizza object
 Pizza.prototype.findSize = function() {
   return this.size;
-}
+};
 
 
 
