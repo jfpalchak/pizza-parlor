@@ -106,20 +106,6 @@ function displayFinalCost(userCart) {
 
 }
 
-// using the NodeList object of checked checkbox elements as a parameter,
-// return an array of the user's selected pizza toppings
-function getUserSelectedToppings(checkedToppings) {
-  
-  const pizzaToppings = [];
-
-  const checkedToppingsArray = Array.from(checkedToppings);
-  checkedToppingsArray.forEach(function(checkbox) {
-    pizzaToppings.push(checkbox.value);
-  });
-
-  return pizzaToppings;
-}
-
 // display a list of all the pizza's added by the user
 function displayCartItems(cartToDisplay) {
 
@@ -142,6 +128,49 @@ function displayCartItems(cartToDisplay) {
 
 }
 
+// display the toppings and total price for the item that is clicked on
+function displayItemDetails(userCart, e) {
+  
+    const pizzaToDisplay = userCart.findPizza(e.target.id);
+
+    // in case user clicks something irrelevant
+    if (!pizzaToDisplay) {
+      return false;
+    }
+
+    const pizzaToppings = pizzaToDisplay.findToppings();
+    const pizzaPrice = pizzaToDisplay.determineCost();
+
+    const ul = document.createElement('ul');
+    ul.setAttribute('id', e.target.id);
+    pizzaToppings.forEach(function(topping) {
+      const li = document.createElement('li');
+      li.append(topping);
+      ul.append(li);
+    });
+
+    const priceTag = document.createElement('span');
+    priceTag.setAttribute('id', 'red');
+    priceTag.append("Item total: $" + pizzaPrice);
+
+    const itemElement = document.getElementById("" + e.target.id);
+    itemElement.append(ul);
+    itemElement.append(priceTag);
+}
+
+// using the NodeList object of checked checkbox elements as a parameter,
+// return an array of the user's selected pizza toppings
+function getUserSelectedToppings(checkedToppings) {
+  
+  const pizzaToppings = [];
+
+  const checkedToppingsArray = Array.from(checkedToppings);
+  checkedToppingsArray.forEach(function(checkbox) {
+    pizzaToppings.push(checkbox.value);
+  });
+
+  return pizzaToppings;
+}
 
 // handle all UI logic
 function handleEverything() {
@@ -149,10 +178,9 @@ function handleEverything() {
   const userCart = new ShoppingCart();
 
   const pizzaForm = document.querySelector('form');
-
   // handle the pizza form submit event
-  pizzaForm.addEventListener('submit', function (e) {
-    e.preventDefault();
+  pizzaForm.addEventListener('submit', function (event) {
+    event.preventDefault();
 
     const pizzaSize = document.getElementById('size').value;
     const selectedToppings = document.querySelectorAll('input:checked');
@@ -165,7 +193,17 @@ function handleEverything() {
 
   });
 
+  const pizzaItems = document.querySelector('div#shopping-cart-pizzas');
+  // handle the click event on shopping cart items
+  pizzaItems.addEventListener('click', function(event) {
+    
+    displayCartItems(userCart);
+
+    displayItemDetails(userCart, event);
+
+  });
+
 }
 
 // run all scripts after page resources are loaded
-window.addEventListener("load", handleEverything);
+window.addEventListener('load', handleEverything);
