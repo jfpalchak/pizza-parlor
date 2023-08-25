@@ -20,7 +20,7 @@ Pizza.prototype.findToppings = function() {
 // TO DO: add branching that changes price depending on the total number of toppings
 Pizza.prototype.findToppingsPrice = function() {
   return this.findToppings().length;
-}
+};
 
 // returns value of size property for the Pizza object
 Pizza.prototype.findSize = function() {
@@ -45,7 +45,7 @@ Pizza.prototype.findSizePrice = function() {
 Pizza.prototype.determineCost = function() {
   this.cost = this.findToppingsPrice() + this.findSizePrice();
   return this.cost;
-}
+};
 
 
 
@@ -54,27 +54,40 @@ Pizza.prototype.determineCost = function() {
 // *     UI LOGIC     *
 // ********************
 
+// 
+function displayFinalCost(pizza) {
+  const order = document.querySelector('span#customer-order');
+  order.innerText = null;
+  
+  const finalCost = "$" + pizza.determineCost();
+
+  order.append(finalCost);
+
+}
+
 // handle the form submit event
-function handleSubmitEvent(e) {
+function handleSubmitPizzaOrder(e) {
   e.preventDefault();
 
   const pizzaSize = document.getElementById('size').value;
   const pizzaToppings = [];
   const checkedToppings = Array.from(document.querySelectorAll('input:checked'));
+
   checkedToppings.forEach(function(checkbox) {
     pizzaToppings.push(checkbox.value);
   });
-  console.log(pizzaToppings);
+
+  const pizza = new Pizza(pizzaSize, pizzaToppings);
+
+  displayFinalCost(pizza);
   
-
-
 }
 
 // handle all UI logic
 function handleEverything() {
 
   const pizzaForm = document.querySelector('form');
-  pizzaForm.addEventListener('submit', handleSubmitEvent);
+  pizzaForm.addEventListener('submit', handleSubmitPizzaOrder);
 
 }
 

@@ -33,7 +33,7 @@ git clone https://github.com/jfpalchak/pizza-parlor.git
 
 ## Tests
 
-##### **Describe:** Pizza()
+#### **Describe:** Pizza()
 
 ```javascript
 Test 1: "It should return a Pizza object with two properties for size and toppings."
@@ -47,7 +47,7 @@ Code:
 Expected Output: Pizza {size: "small", toppings: ["bacon", "pineapple"], cost: 0}
 ```
 
-##### **Describe:** Pizza.prototype.findToppings()
+#### **Describe:** Pizza.prototype.findToppings()
 
 ```javascript
 Test 1: "It should return the current value of the Pizza object's topping property, which is an array of strings."
@@ -58,7 +58,7 @@ Expected Output: ["bacon", "pineapple"]
 
 ```
 
-##### **Describe:** Pizza.prototype.findToppingsPrice()
+#### **Describe:** Pizza.prototype.findToppingsPrice()
 
 ```javascript
 Test 1: "It should return the current value of the Pizza object's topping property, which is an array of strings."
@@ -75,7 +75,7 @@ Expected Output: 2
 
 ```
 
-##### **Describe:** Pizza.prototype.findSize()
+#### **Describe:** Pizza.prototype.findSize()
 
 ```javascript
 Test 1: "It should return the current value of the Pizza object's size property, which is a string."
@@ -86,7 +86,7 @@ Expected Output: "small"
 
 ```
 
-##### **Describe:** Pizza.prototype.findSizePrice()
+#### **Describe:** Pizza.prototype.findSizePrice()
 
 ```javascript
 Test 1: "It should return the current value of the Pizza object's size property, which is a string."
@@ -121,7 +121,7 @@ Expected Output: 5
 
 ```
 
-##### **Describe:** Pizza.prototype.determineCost()
+#### **Describe:** Pizza.prototype.determineCost()
 
 ```javascript
 Test 1: "It should return the initial value of the Pizza object's cost property, which is '0'."
