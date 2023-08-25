@@ -66,18 +66,23 @@ ShoppingCart.prototype.addPizza = function(pizza) {
   this.cart[this.assignId()] = pizza;
 };
 
-// return the cart object from ShoppingCart
-ShoppingCart.prototype.showCart = function () {
-  return this.cart;
-};
-
 // return a specific pizza from the cart object
 ShoppingCart.prototype.findPizza = function(id) {
   if (this.cart[id] !== undefined) {
     return this.cart[id];
   }
   return false;
-}
+};
+
+// return the cart object from ShoppingCart
+ShoppingCart.prototype.showCart = function() {
+  return this.cart;
+};
+
+// return the sum of the costs of every pizza in ShoppingCart's cart
+ShoppingCart.prototype.determineTotalCost = function() {
+ return 0;
+};
 
 // ********************
 // *     UI LOGIC     *
