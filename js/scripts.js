@@ -17,6 +17,7 @@ Pizza.prototype.findToppings = function() {
 };
 
 // returns the length of the array of toppings for the Pizza object
+// TO DO: add branching that changes price depending on the total number of toppings
 Pizza.prototype.findToppingsPrice = function() {
   return this.findToppings().length;
 }
@@ -41,8 +42,10 @@ Pizza.prototype.findSizePrice = function() {
   }
 };
 
+// returns the sum of the size price and the toppings price
 Pizza.prototype.determineCost = function() {
-  return this.findToppingsPrice() + this.findSizePrice();
+  this.cost = this.findToppingsPrice() + this.findSizePrice();
+  return this.cost;
 }
 
 
