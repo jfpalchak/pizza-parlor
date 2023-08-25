@@ -51,6 +51,7 @@ Pizza.prototype.determineCost = function() {
 
 function ShoppingCart() {
   this.cart = {};
+  this.currentId = 0;
 }
 
 
