@@ -71,8 +71,9 @@ ShoppingCart.prototype.showCart = function () {
   return this.cart;
 };
 
-ShoppingCart.prototype.findPizza = function() {
-  return this.cart;
+// return a specific pizza from the cart object
+ShoppingCart.prototype.findPizza = function(key) {
+  return this.cart[key];
 }
 
 // ********************
