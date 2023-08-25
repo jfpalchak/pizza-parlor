@@ -238,11 +238,31 @@ Expected Output: { 1: Pizza}
 #### **Describe:** ShoppingCart.prototype.findPizza()
 
 ```javascript
+Test 1: "It should return the ShoppingCart's cart object."
+Code:
+  const shoppingCart = new ShoppingCart();
+  shoppingCart.findPizza();
+Expected Output: {}
+
+Test 2: "It should return a Pizza object from the ShoppingCart's cart object, when given the corresponding key (or, assigned ID) for that Pizza."
+Code:
+  const shoppingCart = new ShoppingCart();
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  shoppingCart.addPizza(newPizza);
+  shoppingCart.findPizza(1);
+Expected Output: Pizza {size: 'slice', toppings: Array(2), cost: 0}
+
+```
+
+#### **Describe:** ShoppingCart.prototype.determineTotalCost()
+
+```javascript
 Test 1:
 Code:
 Expected Output:
 
 ```
+
 ## Known Bugs
 
 * _Any known issues_
