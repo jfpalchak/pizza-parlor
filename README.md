@@ -293,9 +293,7 @@ Expected Output: 14
 
 ## Known Bugs
 
-* User can infinitely add as many pizza's to the shopping cart as they like, and the list will grow
-beyond the height of the viewport, taking the Final Cost element with it.
-* When the shopping cart reaches more than a certain number of items, and the user clicks an item to display more details, the entire row element containing the cart and the pizza form will grow in height, as well as displace the 'Total' and the 'Remove Items' button below.
+* 
 
 ## License
 
