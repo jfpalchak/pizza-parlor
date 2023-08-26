@@ -70,7 +70,7 @@
         </form>
       </div>
 
-      <div id="shopping-cart" class="col-4 container">
+      <div id="shopping-cart" class="col-3 container">
         <h5>Customer Shopping Cart:</h5>
         <div id="shopping-cart-pizzas">
           <span id="pizza-list"></span>
@@ -80,12 +80,14 @@
     </div>
   </div> 
 
-  <div class="final-cost container">
+  <div id="hidden" class="final-cost container">
     <div class="row justify-content-end">
-      <div id="hidden" class="results col-4">
-        <h5>Final Cost:</h5>
-        <span id="customer-order"></span>
-     </div>
+      <div class="results col-1">
+        <h5>Total: <span id="customer-order"></span></h5>
+      </div>
+      <div class="remove-button col-2">
+        <button id="remove-items" type="button" class="btn btn-primary">Remove Items</button>
+      </div>
     </div>
   </div>
   

@@ -1,12 +1,42 @@
-#customer-order {
-  font-weight: bold;
-  font-size: 2em;
+/* GENERAL STYLES */
+body {
+  background-color: #f4ddb8
+}
+
+.row {
+  padding: 2px;
 }
 
 #hidden {
   display: none;
 }
 
+/* USER FORM */
+#menu-form {
+  border-radius: 8px;
+  background-color: #FEF9EF;
+}
+
+#submit-button {
+  padding: 8px;
+}
+
+/* SHOPPING CART */
 #shopping-cart {
-  
+  border-radius: 8px;
+  background-color: #FEF9EF;
+}
+
+#red {
+  color: red;
+}
+
+/* FINAL COST & REMOVE ITEMS */
+#customer-order {
+  font-weight: bold;
+  color: red;
+}
+
+.remove-button {
+  padding: 8px;
 }
