@@ -3,6 +3,10 @@ body {
   background-color: #f4ddb8
 }
 
+h5 {
+  margin: 10px auto;
+}
+
 .row {
   padding: 2px;
 }
@@ -23,6 +27,12 @@ body {
   background-color: #FEF9EF;
   margin: 5px auto;
 }
+
+#shopping-cart-pizzas {
+  height: 325px;
+  overflow-y: auto;
+}
+
 
 #red {
   color: red;
@@ -46,5 +56,9 @@ body {
 @media screen and (max-width: 770px) {
   .phone-stack {
     width: 100%;
+  }
+
+  #shopping-cart-pizzas {
+    height: 150px;
   }
 }
