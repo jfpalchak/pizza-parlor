@@ -37,6 +37,8 @@ Pizza.prototype.findSizePrice = function() {
       return 18;
     case ('large'):
       return 20;
+    default:
+      return 0;
   }
 };
 
@@ -231,7 +233,7 @@ function handleRemoveItems(userCart) {
   });
 }
 
-// handle all events and UI logic
+// handle all events and ShoppingCart
 function handleEverything() { 
 
   const userCart = new ShoppingCart();
