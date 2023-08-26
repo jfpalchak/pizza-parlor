@@ -11,7 +11,7 @@ function Pizza(pizzaSize, toppingsList) {
   this.cost = 0;
 }
 
-// returns value of toppings property for Pizza object
+// returns an array of the toppings for Pizza object
 Pizza.prototype.findToppings = function() {
   return this.toppings;
 };
