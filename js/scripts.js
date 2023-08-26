@@ -141,7 +141,6 @@ function displayItemDetails(userCart, e) {
     const pizzaPrice = pizzaToDisplay.determineCost();
 
     const ul = document.createElement('ul');
-    ul.setAttribute('id', e.target.id); // TO DO: styling on item details
     pizzaToppings.forEach(function(topping) {
       const li = document.createElement('li');
       li.append(topping);
@@ -149,7 +148,7 @@ function displayItemDetails(userCart, e) {
     });
 
     const priceTag = document.createElement('span');
-    priceTag.setAttribute('id', 'red'); // TO DO: styling on price tag
+    priceTag.setAttribute('id', 'red'); 
     priceTag.append("Item total: $" + pizzaPrice);
 
     const itemElement = document.getElementById("" + e.target.id);
@@ -172,12 +171,9 @@ function getUserSelectedToppings(checkedToppings) {
   return pizzaToppings;
 }
 
-// handle all events and UI logic
-function handleEverything() { // TO DO: add delete item / empty cart button
+// handle the pizza form submit event
+function handleSubmitPizzaForm(userCart) {
 
-  const userCart = new ShoppingCart();
-  
-  // handle the pizza form submit event
   const pizzaForm = document.querySelector('form');
   pizzaForm.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -192,8 +188,11 @@ function handleEverything() { // TO DO: add delete item / empty cart button
     displayCartItems(userCart);
 
   });
+}
 
-  // handle the click event on shopping cart items
+// handle the click event on shopping cart items
+function handleCartItemDisplay(userCart) {
+  
   const pizzaItems = document.querySelector('div#shopping-cart-pizzas');
   pizzaItems.addEventListener('click', function(event) {
     
@@ -202,6 +201,16 @@ function handleEverything() { // TO DO: add delete item / empty cart button
     displayItemDetails(userCart, event);
 
   });
+}
+
+// handle all events and UI logic
+function handleEverything() { // TO DO: add delete item / empty cart button
+
+  const userCart = new ShoppingCart();
+  
+  handleSubmitPizzaForm(userCart);
+  
+  handleCartItemDisplay(userCart);
 
 }
 
