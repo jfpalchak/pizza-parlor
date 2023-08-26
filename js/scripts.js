@@ -74,8 +74,10 @@ ShoppingCart.prototype.findPizza = function(id) {
 };
 
 // removes a specific pizza from the cart object
-ShoppingCart.prototype.removePizza = function() {
-  return this.cart;
+ShoppingCart.prototype.removePizza = function(id) {
+  if (this.findPizza(id)) {
+    return true;
+  }
 }
 
 // return the cart object from ShoppingCart
