@@ -26,17 +26,17 @@ Pizza.prototype.findSize = function() {
   return this.size;
 };
 
-// returns a number, depending on the size property for the Pizza object // TO DO: turn into switch case
+// returns a number, depending on the size property for the Pizza object
 Pizza.prototype.findSizePrice = function() {
-  const size = this.findSize();
-  if (size === 'small') {
-    return 15;
-  } else if (size === 'medium') {
-    return 18;
-  } else if (size === 'large') {
-    return 20;
-  } else if (size === 'slice') {
-    return 5;
+  switch (this.findSize()) {
+    case ('slice'):
+      return 5;
+    case ('small'):
+      return 15;
+    case ('medium'):
+      return 18;
+    case ('large'):
+      return 20;
   }
 };
 
@@ -77,10 +77,10 @@ ShoppingCart.prototype.findPizza = function(id) {
 ShoppingCart.prototype.removePizza = function(id) {
   if (this.cart[id]) {
     delete this.cart[id];
-    return true
+    return true;
   }
   return false;
-}
+};
 
 // return the cart object from ShoppingCart
 ShoppingCart.prototype.showCart = function() {
@@ -224,7 +224,7 @@ function handleRemoveItems(userCart) {
   const removeButton = document.querySelector('button.remove-item');
   removeButton.addEventListener('click', function(event) {
 
-    delete userCart.cart[event.target.id]; // CREATE METHOD
+    userCart.removePizza(event.target.id);
 
     displayCartItems(userCart);
 
