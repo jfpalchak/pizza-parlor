@@ -262,6 +262,42 @@ Expected Output: false
 
 ```
 
+#### **Describe:** ShoppingCart.prototype.removePizza()
+
+```javascript
+Test 1: "It should return the ShoppingCart's cart object."
+Code:
+  const shoppingCart = new ShoppingCart();
+  shoppingCart.removePizza();
+Expected Output: {}
+
+Test 2: "It should return a boolean value true if a specified Pizza is found in the ShoppingCart's cart object, when given the corresponding key (or, assigned ID) for that Pizza."
+Code:
+  const shoppingCart = new ShoppingCart();
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  shoppingCart.addPizza(newPizza);
+  shoppingCart.removePizza(1);
+Expected Output: true
+
+Test 3: "It should remove the Pizza object from the ShoppingCart's cart object, when giving the corresponding key (or, assigned ID) for that Pizza."
+Code:
+  const shoppingCart = new ShoppingCart();
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  shoppingCart.addPizza(newPizza);
+  shoppingCart.removePizza(1);
+Expected Output: true
+
+Test 4: "It should return the boolean value false if a key is passed through the method for a Pizza object that does not exist within the cart object."
+Code:
+  const shoppingCart = new ShoppingCart();
+  const newPizza = new Pizza("slice", ["bacon", "pineapple"]);
+  shoppingCart.addPizza(newPizza);
+  shoppingCart.removePizza(3);
+Expected Output: false
+
+```
+
+
 #### **Describe:** ShoppingCart.prototype.determineTotalCost()
 
 ```javascript
