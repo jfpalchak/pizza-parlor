@@ -73,6 +73,11 @@ ShoppingCart.prototype.findPizza = function(id) {
   return false;
 };
 
+// removes a specific pizza from the cart object
+ShoppingCart.prototype.removePizza = function() {
+  return this.cart;
+}
+
 // return the cart object from ShoppingCart
 ShoppingCart.prototype.showCart = function() {
   return this.cart;
@@ -118,7 +123,7 @@ function displayCartItems(cartToDisplay) {
   Object.keys(cartToDisplay.showCart()).forEach(function(key) { 
     const pizza = cartToDisplay.findPizza(key);
     const li = document.createElement('li');
-    const displayText = "Item " + key + " - Pizza: " + pizza.findSize();
+    const displayText = "Item - Pizza: " + pizza.findSize();
     li.append(displayText);
     li.setAttribute("id", key);
     ul.append(li);
@@ -209,22 +214,21 @@ function handleCartItemDisplay(userCart) {
   });
 }
 
+// handle the click event on the 'Remove Item' button
 function handleRemoveItems(userCart) {
 
   const removeButton = document.querySelector('button.remove-item');
   removeButton.addEventListener('click', function(event) {
 
-    delete userCart.cart[event.target.id];
+    delete userCart.cart[event.target.id]; // CREATE METHOD
 
     displayCartItems(userCart);
-
-
 
   });
 }
 
 // handle all events and UI logic
-function handleEverything() { // TO DO: add delete item / empty cart button
+function handleEverything() { 
 
   const userCart = new ShoppingCart();
   
