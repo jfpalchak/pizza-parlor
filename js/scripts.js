@@ -141,7 +141,7 @@ function displayItemDetails(userCart, e) {
     const pizzaPrice = pizzaToDisplay.determineCost();
 
     const ul = document.createElement('ul');
-    ul.setAttribute('id', e.target.id);
+    ul.setAttribute('id', e.target.id); // TO DO: styling on item details
     pizzaToppings.forEach(function(topping) {
       const li = document.createElement('li');
       li.append(topping);
@@ -149,7 +149,7 @@ function displayItemDetails(userCart, e) {
     });
 
     const priceTag = document.createElement('span');
-    priceTag.setAttribute('id', 'red');
+    priceTag.setAttribute('id', 'red'); // TO DO: styling on price tag
     priceTag.append("Item total: $" + pizzaPrice);
 
     const itemElement = document.getElementById("" + e.target.id);
@@ -171,7 +171,7 @@ function getUserSelectedToppings(checkedToppings) {
   return pizzaToppings;
 }
 
-// handle all UI logic
+// handle all events and UI logic
 function handleEverything() { // TO DO: add delete item / empty cart button
 
   const userCart = new ShoppingCart();
