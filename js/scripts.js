@@ -81,11 +81,14 @@ ShoppingCart.prototype.showCart = function() {
 // return the sum of the costs of every pizza in ShoppingCart's cart
 ShoppingCart.prototype.determineTotalCost = function() {
   let totalCost = 0;
+
   keyArray = Object.keys(this.showCart());
-  for (let i=1; i <= keyArray.length; i++){
-    let pizza = this.findPizza(i);
+
+  keyArray.forEach(function(key) {
+    let pizza = this.findPizza(key);
     totalCost += pizza.determineCost();
-  }
+  }.bind(this));
+  
   return totalCost;
 };
 
@@ -154,6 +157,9 @@ function displayItemDetails(userCart, e) {
     const itemElement = document.getElementById("" + e.target.id);
     itemElement.append(ul);
     itemElement.append(priceTag);
+
+    const removeButton = document.querySelector('button.remove-item');
+    removeButton.setAttribute('id', e.target.id);
 }
 
 // using the NodeList object of checked checkbox elements as a parameter,
@@ -203,14 +209,30 @@ function handleCartItemDisplay(userCart) {
   });
 }
 
+function handleRemoveItems(userCart) {
+
+  const removeButton = document.querySelector('button.remove-item');
+  removeButton.addEventListener('click', function(event) {
+
+    delete userCart.cart[event.target.id];
+
+    displayCartItems(userCart);
+
+
+
+  });
+}
+
 // handle all events and UI logic
 function handleEverything() { // TO DO: add delete item / empty cart button
 
   const userCart = new ShoppingCart();
   
   handleSubmitPizzaForm(userCart);
-  
+
   handleCartItemDisplay(userCart);
+
+  handleRemoveItems(userCart);
 
 }
 
