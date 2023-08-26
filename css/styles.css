@@ -7,10 +7,6 @@ body {
   padding: 2px;
 }
 
-#hidden {
-  display: none;
-}
-
 /* USER FORM */
 #menu-form {
   border-radius: 8px;
@@ -25,6 +21,7 @@ body {
 #shopping-cart {
   border-radius: 8px;
   background-color: #FEF9EF;
+  margin: 5px auto;
 }
 
 #red {
@@ -37,6 +34,17 @@ body {
   color: red;
 }
 
+#hidden {
+  display: none;
+}
+
 .remove-button {
   padding: 8px;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 770px) {
+  .phone-stack {
+    width: 100%;
+  }
 }
