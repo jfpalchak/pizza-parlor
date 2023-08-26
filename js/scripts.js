@@ -101,7 +101,7 @@ function displayFinalCost(userCart) {
   const finalCost = "$" + userCart.determineTotalCost();
 
   order.append(finalCost);
-  document.querySelector('div.results').removeAttribute('id','hidden');
+  document.querySelector('div.final-cost').removeAttribute('id','hidden');
 
 }
 
@@ -166,6 +166,7 @@ function getUserSelectedToppings(checkedToppings) {
   const checkedToppingsArray = Array.from(checkedToppings);
   checkedToppingsArray.forEach(function(checkbox) {
     pizzaToppings.push(checkbox.value);
+    checkbox.checked = false;
   });
 
   return pizzaToppings;
