@@ -297,7 +297,6 @@ Expected Output: false
 
 ```
 
-
 #### **Describe:** ShoppingCart.prototype.determineTotalCost()
 
 ```javascript
@@ -329,7 +328,7 @@ Expected Output: 14
 
 ## Known Bugs
 
-* 
+* If all items are deleted from the shopping cart, the 'Total' and 'Remove Item' button remain visible.
 
 ## License
 
