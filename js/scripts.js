@@ -67,7 +67,7 @@ ShoppingCart.prototype.addPizza = function(pizza) {
 
 // return a specific pizza from the cart object
 ShoppingCart.prototype.findPizza = function(id) {
-  if (this.cart[id] !== undefined) {
+  if (this.cart[id]) {
     return this.cart[id];
   }
   return false;
@@ -75,10 +75,11 @@ ShoppingCart.prototype.findPizza = function(id) {
 
 // removes a specific pizza from the cart object
 ShoppingCart.prototype.removePizza = function(id) {
-  if (this.findPizza(id)) {
+  if (this.cart[id]) {
     delete this.cart[id];
-    return true;
+    return true
   }
+  return false;
 }
 
 // return the cart object from ShoppingCart
