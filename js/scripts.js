@@ -17,7 +17,6 @@ Pizza.prototype.findToppings = function() {
 };
 
 // returns the length of the array of toppings for the Pizza object
-// TO DO: add branching that changes price depending on the total number of toppings
 Pizza.prototype.findToppingsPrice = function() {
   return this.findToppings().length;
 };
@@ -27,7 +26,7 @@ Pizza.prototype.findSize = function() {
   return this.size;
 };
 
-// returns a number, depending on the size property for the Pizza object
+// returns a number, depending on the size property for the Pizza object // TO DO: turn into switch case
 Pizza.prototype.findSizePrice = function() {
   const size = this.findSize();
   if (size === 'small') {
@@ -173,7 +172,7 @@ function getUserSelectedToppings(checkedToppings) {
 }
 
 // handle all UI logic
-function handleEverything() {
+function handleEverything() { // TO DO: add delete item / empty cart button
 
   const userCart = new ShoppingCart();
   
