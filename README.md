@@ -13,7 +13,42 @@
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_Pizza Parlor_ is a web application that mocks an online order page. Upon viewing the site, a user is provided with a simple form, which asks for two types of input:
+  1. A dropdown menu in which the user can select the size of Pizza they'd like to order, and
+  2. A number of checkboxes, each of which the user has the option to check or leave un-checked. 
+
+Upon making their selections, the user can select 'Add to Cart', at which point their Pizza order will be presented in the 'Shopping Cart' container to the right of the page. Depending on the combination of inputs selected in the form before submitting their order, the user will notice a handful of new elements appear on the webpage:
+  * The Pizza item will appear in the shopping cart, identified initially by the selected size.
+  * The total cost of the item(s) in the shopping cart, below the cart's container, presented in bold red text.
+  * A 'Remove Item' button displayed beside the total cost of the user's order.
+
+If the user wishes to check the details of their order, they can click on the bulleted item displayed in the shopping cart. Doing so will display each selected topping for that specific Pizza object, as well as the total price of the Pizza, which itself will display in red text.
+
+Should the user wish to add another Pizza to their order, they may submit the form as many times as they wish. Not only will each Pizza order append to the list displayed in the shopping cart, but the total cost of the items will change with respect to the details of each order. 
+
+Additionally, the user may remove a specific item from their shopping cart. They can do so by completing the following steps:
+  1. Click on the bulleted Pizza item they wish to remove.
+  2. Click the 'Remove Item' button below the shopping cart container. 
+
+The final cost of the shopping cart will continue to reflect each individual change made by the user. 
+
+The prices for each Pizza are determined by the following formula:
+```
+Total Cost = Price of Pizza Toppings + Price of Pizza Size
+```
+Where the price of the user's selected toppings is simply:
+```
+Price of Pizza Toppings = $1 * Number of Toppings Selected
+```
+And the price of each Pizza size is represented in the table below:
+
+| Size      | Price    |
+| :-------: | -------- |
+| Slice      |   $5   |
+| Small      |   $15  |
+| Medium     |   $18  |
+| Large      |   $20  |
+
 
 ## Setup/Installation Requirements
 
